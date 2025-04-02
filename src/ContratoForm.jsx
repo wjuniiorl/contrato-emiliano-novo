@@ -47,7 +47,7 @@ export default function ContratoForm() {
         alert("Erro ao enviar o contrato.");
       }
     } catch (err) {
-      alert("Erro ao conectar com servidor.");
+      alert("Erro ao conectar com o servidor.");
       console.error(err);
     }
   };
@@ -58,12 +58,12 @@ export default function ContratoForm() {
         <h1 className="text-2xl font-bold">Contrato Emiliano Filmmaker</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <inputField label="Nome Contratante 1" name="nome1" value={form.nome1} onChange={handleChange} />
-          <inputField label="RG Contratante 1" name="rg1" value={form.rg1} onChange={handleChange} />
-          <inputField label="CPF Contratante 1" name="cpf1" value={form.cpf1} onChange={handleChange} />
-          <inputField label="Endereço Contratante 1" name="endereco1" value={form.endereco1} onChange={handleChange} />
-          <inputField label="Cidade Contratante 1" name="cidade1" value={form.cidade1} onChange={handleChange} />
-          <inputField label="WhatsApp Contratante 1" name="whatsapp1" value={form.whatsapp1} onChange={handleChange} />
+          <InputField label="Nome Contratante 1" name="nome1" value={form.nome1} onChange={handleChange} />
+          <InputField label="RG Contratante 1" name="rg1" value={form.rg1} onChange={handleChange} />
+          <InputField label="CPF Contratante 1" name="cpf1" value={form.cpf1} onChange={handleChange} />
+          <InputField label="Endereço Contratante 1" name="endereco1" value={form.endereco1} onChange={handleChange} />
+          <InputField label="Cidade Contratante 1" name="cidade1" value={form.cidade1} onChange={handleChange} />
+          <InputField label="WhatsApp Contratante 1" name="whatsapp1" value={form.whatsapp1} onChange={handleChange} />
         </div>
 
         <div>
@@ -79,18 +79,18 @@ export default function ContratoForm() {
 
         {temSegundo && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-t pt-6">
-            <inputField label="Nome Contratante 2" name="nome2" value={form.nome2} onChange={handleChange} />
-            <inputField label="RG Contratante 2" name="rg2" value={form.rg2} onChange={handleChange} />
-            <inputField label="CPF Contratante 2" name="cpf2" value={form.cpf2} onChange={handleChange} />
-            <inputField label="Endereço Contratante 2" name="endereco2" value={form.endereco2} onChange={handleChange} />
-            <inputField label="Cidade Contratante 2" name="cidade2" value={form.cidade2} onChange={handleChange} />
-            <inputField label="WhatsApp Contratante 2" name="whatsapp2" value={form.whatsapp2} onChange={handleChange} />
+            <InputField label="Nome Contratante 2" name="nome2" value={form.nome2} onChange={handleChange} />
+            <InputField label="RG Contratante 2" name="rg2" value={form.rg2} onChange={handleChange} />
+            <InputField label="CPF Contratante 2" name="cpf2" value={form.cpf2} onChange={handleChange} />
+            <InputField label="Endereço Contratante 2" name="endereco2" value={form.endereco2} onChange={handleChange} />
+            <InputField label="Cidade Contratante 2" name="cidade2" value={form.cidade2} onChange={handleChange} />
+            <InputField label="WhatsApp Contratante 2" name="whatsapp2" value={form.whatsapp2} onChange={handleChange} />
           </div>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <inputField label="Nome do Evento" name="evento" value={form.evento} onChange={handleChange} />
-          <inputField label="Local do Evento" name="local" value={form.local} onChange={handleChange} />
+          <InputField label="Nome do Evento" name="evento" value={form.evento} onChange={handleChange} />
+          <InputField label="Local do Evento" name="local" value={form.local} onChange={handleChange} />
           <div>
             <label className="block font-medium">Data do Evento</label>
             <input
@@ -102,7 +102,7 @@ export default function ContratoForm() {
               required
             />
           </div>
-          <inputField label="Horário do Evento" name="horario" value={form.horario} onChange={handleChange} />
+          <InputField label="Horário do Evento" name="horario" value={form.horario} onChange={handleChange} />
         </div>
 
         <div>
@@ -124,7 +124,7 @@ export default function ContratoForm() {
   );
 }
 
-function inputField({ label, name, value, onChange }) {
+function InputField({ label, name, value, onChange }) {
   return (
     <div>
       <label className="block font-medium">{label}</label>
