@@ -35,7 +35,7 @@ export default function ContratoForm() {
     };
 
     try {
-      const res = await fetch("https://webhook.lacintradev.tech/webhook/contrato-emiliano", {
+      const res = await fetch("https://n8n.lacintradev.tech/webhook-test/contrato-emiliano", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
